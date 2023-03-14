@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtInputAnswer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="36dp"
+            android:background="#00FFFFFF"
+            android:hint="Player's Answer"
+            app:boxBackgroundColor="#00FFFFFF"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtEquation">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txtPlayerNameGame"
+            android:layout_width="85dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="160dp"
+            android:text="Player's Turn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtEquation"
+            android:layout_width="136dp"
+            android:layout_height="54dp"
+            android:layout_marginTop="48dp"
+            android:text="0 + 0 = ?"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtPlayerNameGame"
+            app:layout_constraintHorizontal_bias="0.51"
+            app:layout_constraintStart_toStartOf="@+id/txtPlayerNameGame"
+            app:layout_constraintTop_toBottomOf="@+id/txtPlayerNameGame" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="326dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="64dp"
+            android:text="SUBMIT ANSWER"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/txtInputAnswer"
+            app:layout_constraintHorizontal_bias="0.461"
+            app:layout_constraintStart_toStartOf="@+id/txtInputAnswer"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputAnswer"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
